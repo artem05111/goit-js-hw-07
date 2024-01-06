@@ -4,7 +4,7 @@ const nameOutput = document.querySelector("#name-output");
 nameInput.addEventListener("input", onInputOutput);
 
 function onInputOutput(evt) {
-  const name = event.currentTarget.value;
+  const name = evt.currentTarget.value.trim();
   if (name !== "") {
     nameOutput.textContent = name;
   } else {
